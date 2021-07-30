@@ -27,4 +27,4 @@ async def bot_webhook(update: dict):
 
 @app.on_event("shutdown")
 async def on_shutdown():
-    pass
+    await bot.session.close()
